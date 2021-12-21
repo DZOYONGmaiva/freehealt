@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr-FR">
+    <head>
+        <title>Acceuil_MJV.com</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <meta name="Mangas Jeux Video" content="vente de jeux vidéo issues de mangas">
+        <link rel="stylesheet" type="text/css" href={% static 'CSS/style.css'%}
+    </head>
+    <body>
+        <div class="header">
+            <img id="imglogo" src="lo1go.jpg" alt="image du logo du site">
+            <form method="POST" action="PageErreur.html">
+                <label for="recherche">Recherche</label>
+                <input type="search" id="recherche" name="search" list="rec">
+                <datalist id="rec">
+                    <option value="Jeux"><a href="#">Jeux video</a></option>
+                    <option value="Mangas"><a href="#">Mangas</a></option>
+                    <option value="Animé"><a href="#">Animé</a></option>
+                </datalist>
+                <input type="submit" value="search">
+            </form>
+            <form method="POST" action="CreationDeCompte.html">
+                <input type="submit" value="Se Connecter"><br>
+            </form>
+        </div>
+
+
+        <div class="nav">
+                <ul class="menene">
+                    <li class="menu"><a href="http://127.0.0.1:8000/">Article</a></li>
+                    <li class="menu"><a href="ajouter">Ajouter</a></li>
+                    <li class="menu"><a href="modifier">Modifier</a> </li>
+                </ul>
+        </div>
+        <div>
+            {%block partieNonCommune %}
+            {% endblock %}
+        </div>
+
+        <div id="auteur">
+            <p>Copyrigth &copy; TCHAGANG KOMBOU Ronald Luther - Toute reproduction sans autorisation de l'auteur est interdite -
+                 Pour me contacter cliquez <a href="mailto:tcronald722@gmail.com" style="color: peru;">ici</a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{%extends 'reference.html' %}
+{%block partieNonCommune %}
+    <p> Liste des medecin : </p>
+    <table border = "1" >
+        <tr>
+            <th>Nom</th>
+            <th>Date de naissance</th>
+            <th>sexe du Medecin</th>
+            <th>description du Medecin</th>
+        </tr>
+
+ {% for element in nom %}
+        <tr>
+            <th>{{element.nomMedecin}}</th>
+            <th>{{element.dateDeNaissanceMedecin}}</th>
+            <th>{{element.sexeMedecin}}</th>
+            <th>{{element.descriptionMedecin}}</th>
+        </tr>
+	{% endfor %}
+
+    </table>
+{% endblock %}

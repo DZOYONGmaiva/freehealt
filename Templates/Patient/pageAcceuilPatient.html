@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PAGE ACCEUIL PATIENT</title>
+    </head>
+    <body>
+        <p>Je suis la page d'acceuil du site où le patient peut voir ses rendez vous </p>
+             {% for champ in cleProfil %}
+                {{champ.nomPersonne}}______{{champ.prenomPersonne}}______<a href="{% url 'supprimer' item.id %}">Supprimer</a><br>
+            {%endfor%}
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{%extends 'reference.html' %}
+{%block partieNonCommune %}
+     <form method="POST" action="traitement.py">
+            <fieldset style="line-height: 35px;">
+                <legend>Ajout d'un article</legend>
+                <label for="nom">Nom de l'article</label>
+                <input id="nom" type="text" name="nom" required><br/>
+
+                <label for="Quantite">Quantité en stock</label>
+                <input id="Quantite" type="number" name="Quantite" required><br/>
+
+                <label for="prix">Prix</label>
+                <input id="prix" type="number" name="prix" required><br/>
+
+                <label for="da">Description de l'article</label> <br>
+                <textarea id="story" name="story" rows="5" cols="33">
+                </textarea>
+
+                <input type="submit" value="Envoyer">
+            </fieldset>
+        </form>
+{% endblock %}

@@ -1,0 +1,88 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire d'inscrition</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="{% static 'Formulaire/fonts/material-icon/css/material-design-iconic-font.min.css'%}">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="{% static 'Formulaire/css/style.css'%}">
+    </head>
+    <body style="color:black;">
+    <form method="POST" action="">
+       <!--         {% for champ in cle %}
+        {{champ.label}}
+        {{champ}}<br> <br>
+            {%endfor%}-->
+            </form>
+
+            <div class="main" style="background-color: #00ad5f;">
+
+                <div class="container">
+                    <form method="POST" action="" class="appointment-form" id="appointment-form">
+                        {% csrf_token %}
+                        <h2>Formulaire d'inscription</h2>
+                        <div class="form-group-1">
+                            <!--<input type="text" name="nom" id="nom" placeholder="Nom" required />-->
+                            <label>Nom</label>
+                            {{cleInscription.nomPersonne}}
+                            <!--<input type="text" name="prenom" id="prenom" placeholder="Prenom" required />-->
+                            <label>Prenom</label>
+                            {{cleInscription.prenomPersonne}}
+                            <!--<input type="date" name="date_naissance" id="date_naissance" placeholder="Date de naissance" required />-->
+                            <label>Date de Naissance</label>
+                            {{cleInscription.dateNaissancePersonne}}
+                            <!--<input type="text" name="lieu_naissance" id="lieu_naissance" placeholder="Lieu de naissance" required />-->
+                            <label>Lieu de naissaaance</label>
+                            {{cleInscription.lieuDeNaissancePersonne}}
+                            <label>Sexe</label>
+                             {{cleInscription.sexePersonne}}
+                            <!--<input type="email" name="email" id="email" placeholder="Email" required />-->
+                            <label>Email</label>
+                            {{cleInscription.emailPersonne}}
+                            <!--<input type="number" name="phone_number" id="phone_number" placeholder="Numeros de téléphone" required />-->
+                            <label>Telehone</label>
+                            {{cleInscription.telephonePersonne}}
+                            <label>Mot de passe</label>
+                            {{cleInscription.motDePasse}}
+                            <label>Confirmer mot de passe</label>
+                            {{cleInscription.motDePasse}}
+                        </div>
+                        <div class="form-group-2">
+                            <h3>Adresse</h3>
+                            <!--<input type="text" name="pays" id="pays" placeholder="Pays" required />-->
+                            <label>Pays</label>
+                            {{cleInscriptionAdresse}}
+                            <!--<input type="text" name="ville" id="ville" placeholder="Ville" required />-->
+                             <label>Ville</label>
+                            {{cleInscriptionAdresse.ville}}
+                            <!--<input type="text" name="quartier" id="quartier" placeholder="Quartier" required />-->
+                            <label>Quartier</label>
+                            {{cleInscriptionAdresse.quartier}}
+                            <!--<textarea id="indicatif" name="indicatif" rows="5" cols="33">Indication sur l'adresse</textarea>-->
+                            <label>Indication</label>
+                            {{cleInscriptionAdresse.indication}}
+
+                        </div>
+                        <!--<div class="form-check">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the  <a href="#" class="term-service">Terms and Conditions</a></label>
+                        </div>-->
+                        <div class="form-submit">
+                            <input type="submit" name="submit" id="submit" class="submit" value="Inscription" style="position:right;"/>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- JS -->
+            <script src="{% static 'Formulaire/vendor/jquery/jquery.min.js'%}"></script>
+            <script src="{% static 'Formulaire/js/main.js'%}"></script>
+    </body>
+</html>
